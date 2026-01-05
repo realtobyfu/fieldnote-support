@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fieldnote — Plant Journal | Support</title>
+    <meta name="description" content="Fieldnote is a botanical field journal app for documenting your plant encounters. Get support, FAQs, and contact information.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --aged-paper: #F5EFE3;
+            --paper: #FAF8F5;
+            --ink: #2D2519;
+            --muted-ink: #6B6356;
+            --faded-ink: #9A9286;
+            --accent: #4A7C59;
+            --border: #D4C9B8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--aged-paper);
+            color: var(--ink);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent);
+            border-radius: 18px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(74, 124, 89, 0.2);
+        }
+
+        .app-icon svg {
+            width: 44px;
+            height: 44px;
+            fill: white;
+        }
+
+        h1 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--muted-ink);
+        }
+
+        /* Sections */
+        section {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-family: 'Crimson Pro', Georgia, serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2 svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--accent);
+        }
+
+        p {
+            color: var(--muted-ink);
+            margin-bottom: 1rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* FAQ */
+        .faq-item {
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-item:first-child {
+            padding-top: 0;
+        }
+
+        .faq-question {
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-answer {
+            color: var(--muted-ink);
+            font-size: 0.95rem;
+        }
+
+        /* Contact */
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .contact-link:hover {
+            opacity: 0.8;
+        }
+
+        .contact-link svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--accent);
+        }
+
+        /* Features list */
+        .features {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .feature-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--aged-paper);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-icon svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--accent);
+        }
+
+        .feature-text {
+            font-size: 0.95rem;
+            color: var(--muted-ink);
+        }
+
+        .feature-text strong {
+            color: var(--ink);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            margin-top: 1rem;
+        }
+
+        .developer {
+            font-size: 0.9rem;
+            color: var(--faded-ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .copyright {
+            font-size: 0.85rem;
+            color: var(--faded-ink);
+        }
+
+        /* App Store badge */
+        .app-store-badge {
+            display: inline-block;
+            margin-top: 1.5rem;
+        }
+
+        .app-store-badge img {
+            height: 44px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="app-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
+                </svg>
+            </div>
+            <h1>Fieldnote</h1>
+            <p class="tagline">A botanical field journal for the curious naturalist</p>
+        </header>
+
+        <section>
+            <h2>
+                <svg viewBox="0 0 24 24"><path d="M12,3L2,12H5V20H19V12H22L12,3M12,8.75A2.25,2.25 0 0,1 14.25,11A2.25,2.25 0 0,1 12,13.25A2.25,2.25 0 0,1 9.75,11A2.25,2.25 0 0,1 12,8.75M12,15C13.5,15 16.5,15.75 16.5,17.25V18H7.5V17.25C7.5,15.75 10.5,15 12,15Z"/></svg>
+                About
+            </h2>
+            <p>Fieldnote is your personal herbarium — a place to document, organize, and learn from your encounters with plants and trees. Whether you're a seasoned botanist or just beginning to notice the green world around you, Fieldnote helps you capture and remember every discovery.</p>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z"/></svg>
+                    </div>
+                    <p class="feature-text"><strong>Capture</strong> — Photograph plants and identify them instantly with AI</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M18,22A2,2 0 0,0 20,20V4C20,2.89 19.1,2 18,2H12V9L9.5,7.5L7,9V2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18Z"/></svg>
+                    </div>
+                    <p class="feature-text"><strong>Library</strong> — Build your personal collection of observed species</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z"/></svg>
+                    </div>
+                    <p class="feature-text"><strong>Explore</strong> — Discover new plants waiting to be found nearby</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>
+                <svg viewBox="0 0 24 24"><path d="M15.07,11.25L14.17,12.17C13.45,12.89 13,13.5 13,15H11V14.5C11,13.39 11.45,12.39 12.17,11.67L13.41,10.41C13.78,10.05 14,9.55 14,9C14,7.89 13.1,7 12,7A2,2 0 0,0 10,9H8A4,4 0 0,1 12,5A4,4 0 0,1 16,9C16,9.88 15.64,10.67 15.07,11.25M13,19H11V17H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z"/></svg>
+                FAQ
+            </h2>
+            <div class="faq-item">
+                <p class="faq-question">Does Fieldnote work offline?</p>
+                <p class="faq-answer">Yes! Your entire plant library is stored locally on your device. You can browse, edit, and add manual entries without an internet connection. AI identification requires connectivity.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">Is my data private?</p>
+                <p class="faq-answer">Absolutely. Your photos and observations stay on your device. We don't collect personal data or track your location history. The app syncs via iCloud for your personal backup only.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">How accurate is the plant identification?</p>
+                <p class="faq-answer">Our AI provides a confidence score with each identification. We encourage you to verify identifications, especially for plants you plan to consume or handle. Every identification is a learning opportunity!</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">Can I export my data?</p>
+                <p class="faq-answer">Your data syncs automatically via iCloud to your other Apple devices. Full export features are coming in a future update.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>
+                <svg viewBox="0 0 24 24"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/></svg>
+                Contact & Support
+            </h2>
+            <p>Have a question, found a bug, or want to suggest a feature? I'd love to hear from you.</p>
+            <a href="mailto:3tobiasfu@gmail.com?subject=Fieldnote%20Support" class="contact-link">
+                <svg viewBox="0 0 24 24"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"/></svg>
+                3tobiasfu@gmail.com
+            </a>
+        </section>
+
+        <footer>
+            <p class="developer">Developed by Tobias Fu</p>
+            <p class="copyright">&copy; 2025 Fieldnote. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
